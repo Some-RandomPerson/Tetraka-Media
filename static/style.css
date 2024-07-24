@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Reddit sans, sans-serif;
+    color: #ffffff;
+    background-image: linear-gradient(#FA5200 0%, #FA7E00 51%, #FAA100 85%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+h1.f {
+    background-color: transparent;
+    color: #333333;
+    text-align: center;
+}
+
+h2 {
+    background-color: #333333;
+}
+
+h2.c {
+    background-color: #333333;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+h2.m {
+    text-align: center;
+}
+
+h2.r {
+    text-align: center;
+    font-size: 20px;
+}
+
+h3 {
+    background-color: #333333;
+}
+
+h3.r {
+    text-align: left;
+    background-color: #333333;
+}
+
+h5 {
+    background-color: #333333;
+}
+
+h5.m {
+    text-align: center;
+}
+
+p {
+    background-color: #333333;
+}
+
+p.invis {
+    background-color: transparent;
+}
+
+p.m {
+    background-color: #333333;
+    text-align: center;
+}
+
+p.r {
+    background-color: #333333;
+    text-align: left;
+}
+
+/*Form text*/
+
+p.f {
+    background-color: transparent;
+    color: #333333;
+    text-align: center;
+}
+
+p.fi {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: left;
+}
+
+a.h2 {
+    font-family: Reddit sans, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #333333;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    height: 7px;
+    background: linear-gradient(to right, #9F00FA 0%, #BD53FA 51%, #F000FA 85%);
+    border-radius: 30px;
+    border-color: transparent;
+}
+
+.star {
+    height: 100%;
+    width: 48px;
+}
+
+
+
+li, a, button {
+    font-family: Reddit sans, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #333333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+    padding: 1px 10%;
+    background-color: #333333;
+    z-index: 1;
+}
+
+.logo {
+    cursor: pointer;
+    background-color: #333333;
+    height: 90px; 
+    width: 90px;
+    transition: 0.4s;
+}
+
+.nav_links {
+    list-style: none;
+    background-color: #333333;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px
+}
+
+.nav_links li a {
+    transition: linear 0.15s;
+    cursor: pointer;
+}
+
+.nav_links li a:hover {
+    color: #FAA100
+}
+
+.active {
+    color: #FAA100;
+}
+
+
+/* Links */
+
+a:hover {
+    color: #9F00FA;
+    transition: 0.4s;
+}
+
+/* Repsonive Calls */
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+}
+  
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+}
+ 
+
+
+
+body {font-family: Reddit Sans, sans-serif;}
+
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #bbbbbb;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #cdcdcd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button.f:hover {
+  opacity:0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: transparent;
+  backdrop-filter: blur(40px);
+  padding-top: 1px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #eeeeee;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+}
+
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+::placeholder {
+  color: #444444;
+}
+
+
+
+
+
+.row {
+    background: transparent;
+    position: relative;
+    top: 100px;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.spacecolumn {
+    float: left;
+    width: 10%;
+    background-color: transparent;
+}
+
+.leftcolumn {   
+    float: left;
+    width: 60%;
+    background-color: transparent;
+}
+
+.leftcolumnR {   
+    float: left;
+    width: 80%;
+    background-color: transparent;
+}
+  
+.rightcolumn {
+    float: left;
+    width: 20%;
+    padding-left: 20px;
+    background-color: transparent;
+}
+  
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Card Elements */
+
+.card {
+    background-color: #333333;
+    padding: 20px;
+    margin-top: 20px;
+    border: #333333;
+    border-radius: 20px;
+    box-shadow: 7px 7px 2.5px #ffffff;
+}
+
+.ccard {
+    background-color: #333333;
+    padding: 20px;
+    margin-top: 20px;
+    border: #333333;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+    display: inline-flex;
+    height: 200px;
+    justify-content: space-between;
+}
+
+
+/* Invisable Elements */
+
+.invcard {
+    background-color: transparent;
+    border: transparent;
+    justify-self: auto;
+}
+
+
+/* Clear floats after the columns */
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 250px;
+    padding: 30px;
+    text-align: center;
+    background: #333333;
+}
+
+
+button.a {
+    padding: 9px 25px;
+    background: linear-gradient(to right, #9F00FA 0%, #BD53FA 51%, #F000FA 85%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s, ease 0s;
+    width: auto;
+}
+
+button.a:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+    background-blend-mode: darken;
+    transition: 1s;
+}
+
+
+table, th, td {
+    border: 1px solid transparent;
+    border-collapse: collapse;
+    padding: 10px;
+    background-color: #444444;
+}
+
+th {
+    font-size: 18px;
+}
+
+td {
+    text-align: left;
+    width: 50%;
+}
+
+.rev {
+    justify-content: space-between;
+    display: inline-flex;
+    margin-left: 10px;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+figure {
+    padding: 20px;
+}
+
+.login {
+    padding: 9px 25px;
+    background: blue;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s, ease 0s;
+    width: auto;
+}

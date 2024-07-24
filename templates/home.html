@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetraka Media</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='logo/favicon.svg') }}"> /* _icon/favicon.svg */
+</head>
+<body>
+<script src="{{ url_for('static',filename='javascript/navbar.js') }}"></script>
+
+  <header>
+    <img class="logo" src="{{ url_for('static',filename='logo/animated-logo.gif') }}" alt="logo" id="logo">
+    <nav id="navbar">
+        <ul class="nav_links">
+          <li><a class="active" href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('keyboards') }}">Keyboards</a></li>
+          <li><a href="{{ url_for('mice') }}">Mice</a></li>
+          <li><a href="{{ url_for('monitors') }}">Monitor</a></li>
+        </ul>
+    </nav>
+
+    <script src="{{ url_for('static',filename='javascript/form.js') }}"></script>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="a" id="btn">Sign Up</button>
+    
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" action="{{url_for('redi') }}" method="post">
+        <div class="container">
+          <h1 class="f">Sign Up</h1>
+          <p class="f">Please fill in this form to sign up for our monthly news letter.</p>
+          <hr>
+          <label for="name"><b><p class="f" style="text-align: left;">First Name</p></b></label>
+          <input type="text" placeholder="Enter Name" name="fname" required>
+
+          <label for="name"><b><p class="f" style="text-align: left;">Last Name</p></b></label>
+          <input type="text" placeholder="Enter Last Name" name="lname" required>
+          
+          <label for="email"><b><p class="f" style="text-align: left;">Email</p></b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+          
+          <label>
+            <p class="f" style="text-align: left;"><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px;">Email me for new product releases</p>
+            <p class="f" style="text-align: left;"><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px;">Email me when a review is posted</p>
+          </label>
+    
+          <p class="f">By creating an account you agree to our <a href="#" style="color:dodgerblue;background-color: transparent;">Terms & Privacy</a>.</p>
+    
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" value="submit" class="signupbtn">Sign Up</button>
+            <p class="f">For Administrators, <a href="{{url_for('customer') }}" style="color:dodgerblue;background-color: transparent;">click here.</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </header>
+      
+  <div class="row">
+      <div class="spacecolumn">
+        <div class="invcard">
+           <p class="invis">&nbsp</p>
+        </div>
+      </div>
+      <div class="leftcolumn" style="text-align: center;">
+        <div class="card">
+          <h2>Logitech G915 - The best low profile keyboard out there?</h2>
+          <h5>Keyboard Review, May 20, 2024<br>&nbsp</h5>
+          <img src="{{ url_for('static',filename='keyboards/g915-prod-photo.webp') }}" alt="Logitech G915 TKL Keyboard" style="border-radius: 5px;">
+          <p>&nbsp</p>
+          <p>We reviewed one of the thinest mechanical keyboards. <br> Does this $200 keyboard stand a chance against the rest of the keyboards out there?<br>&nbsp</p>
+          <hr>
+          <a class="cta" href="{{ url_for('logitech_g915') }}"><button class="a">Click here to find out more about the Logitech G915 TKL!</button></a>
+        </div>
+        <div class="card">
+          <h2>MSI G27CQ4 E2</h2>
+          <h5>Monitor Review, May 29, 2024</h5>
+          <div class="fakeimg" style="height:200px;width: 200px;">Image</div>
+          <p>&nbsp</p>
+          <p>We tested out this value 1440p gaming monitor. Is this this still relavant in 2024?</p>
+        </div>
+        <div class="card">
+          <h2>Logitech G203</h2>
+          <h5>Mouse Review, May 29, 2024</h5>
+          <img src="{{url_for('static', filename='mice/g203-prod-photo.webp')}}">
+          <p>&nbsp</p>
+          <p>Is this budget 2020 mouse still capable of gaming in 2024?</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>About Us</h2>
+          <img src="{{ url_for('static',filename='logo/favicon.svg') }}" alt="logo" style="scale: 50%;">
+          <p>At TetrakaMedia, we are to industry first when it comes to reviews.</p>
+          <p>We cover everything from keyboards, to momitors. If you dont see a product, email us and we'll review it for you!</p>
+        </div>
+        <div class="card">
+          <h3>Recent Posts</h3>
+          <br><div class="fakeimg"><p style="background-color: #aaa">Logitech G502</p></div>
+          <br><div class="fakeimg"><p style="background-color: #aaa">Razer mouse</p></div>
+          <br><div class="fakeimg"><p style="background-color: #aaa">AOC monitor</p></div>
+        </div>
+        <div class="spacecolumn">
+          <div class="invcard">
+            <p class="invis">&nbsp</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+      <div style="display: inline-block;">
+        <a href="{{ url_for('facebook') }}"><img src="{{ url_for('static',filename='social-media-icon/facebook-fav.svg') }}" style="height: 30px;width: auto;"></a>
+        <a href="{{ url_for('instagram') }}"><img src="{{ url_for('static',filename='social-media-icon/insta-fav.svg') }}" style="height: 30px;width: auto;"></a>
+        <a href="{{ url_for('twitter') }}"><img src="{{ url_for('static',filename='social-media-icon/twitter-fav.svg') }}" style="height: 30px;width: auto;"></a>
+      </div>
+      <br>
+      <p>I will put nav links donw here when i decide i want to </p>
+    </footer>
+</body>
+</html>

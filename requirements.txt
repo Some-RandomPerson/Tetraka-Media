@@ -1,6 +1,5 @@
 flask
 pip
-webbrowser
 time
 cryptography.fernet
 sys

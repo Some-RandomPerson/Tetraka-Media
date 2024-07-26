@@ -1,4 +1,4 @@
 flask
 pip
-cryptography.fernet
+Fernet
 sys

@@ -1,3 +1,4 @@
 flask
 pip
 Fernet
+gunicorn==19.7.1

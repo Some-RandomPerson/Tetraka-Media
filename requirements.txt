@@ -1,0 +1,6 @@
+flask
+os
+webbbrowser
+time
+cryptography.fernet
+sys
